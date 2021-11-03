@@ -1,18 +1,37 @@
-#####################
-Título del proyecto
-#####################
+###################################
+Implantación de Aplicaciones Web
+###################################
 
-Apartado 1
-===========
+Configuración inicial
+=======================
 
-.. Añadimos así para el PDF. 
+.. toctree::
 
    :maxdepth: 2
    :hidden:
-   :caption: Apartado 1
+   :caption: Configuración inicial
 
-   introducción
+   introduccion/crear-vm
+   introduccion/configuracion-ssh
+   introduccion/configuracion-ssh-clave-publica
 
-| 1. :doc:`introducción`
+| 1.1 :doc:`introduccion/crear-vm`
+| 1.2 :doc:`introduccion/configuracion-ssh`
+| 1.3 :doc:`introduccion/configuracion-ssh-clave-publica`
 
-.. El TOC está oculto para que no se muestre en la página, pero sí en el menú 
+Seguridad
+===========
+
+.. toctree::
+
+   :maxdepth: 2
+   :hidden:
+   :caption: Seguridad
+
+   seguridad/pruebas-hydra
+
+
+| 2.1 :doc:`seguridad/pruebas-hydra`
+| 2.2 :doc:`introduccion/configuracion-ssh`
+| 2.3 :doc:`introduccion/configuracion-ssh-clave-publica`
+

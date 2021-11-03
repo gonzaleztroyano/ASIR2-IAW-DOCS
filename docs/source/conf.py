@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'NOMBRE DEL PROYECTO'
+project = 'Implantación de Aplicaciones Web'
 copyright = '2021, Pablo González, CC BY 2.5 ES'
-author = 'Pablo González Troyano - (Opt. Curso) - (Opt. IES)'
+author = 'Pablo González Troyano - 2º ASIR - IES Villablanca'
 
 release = '0.1'
 version = '0.1'
@@ -36,7 +36,7 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 # -- Modificar el FAVICON -- 
-html_favicon = 'URL FAVICON'
+#html_favicon = 'URL FAVICON'
 
 # -- Quitar las flechitas entre las páginas -- 
 html_theme_options = {
