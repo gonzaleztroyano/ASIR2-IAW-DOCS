@@ -1,5 +1,5 @@
-# Plantilla proyectos Read The Docs
-## Pablo González
+# Documentación Implantación de Aplicaciones Web
+## Pablo González - 2º ASIR
 
 Web pública del proyecto:
 Licencia:
