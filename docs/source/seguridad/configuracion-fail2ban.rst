@@ -105,7 +105,7 @@ Para bloquer una IP en una jaula dada:
 
 .. code-block::
 
-fail2ban-client set <JAIL-NAME> banip <IP-ADDRESS>
+    fail2ban-client set <JAIL-NAME> banip <IP-ADDRESS>
 
 .. |br| raw:: html
 
