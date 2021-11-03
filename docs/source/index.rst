@@ -13,11 +13,10 @@ Configuración inicial
 
    introduccion/crear-vm
    introduccion/configuracion-ssh
-   introduccion/configuracion-ssh-clave-publica
 
 | 1.1 :doc:`introduccion/crear-vm`
 | 1.2 :doc:`introduccion/configuracion-ssh`
-| 1.3 :doc:`introduccion/configuracion-ssh-clave-publica`
+
 
 Seguridad
 ===========
@@ -28,10 +27,11 @@ Seguridad
    :hidden:
    :caption: Seguridad
 
+   seguridad/configuracion-ssh-clave-publica
    seguridad/pruebas-hydra
+   seguridad/configuracion-fail2ban
 
-
-| 2.1 :doc:`seguridad/pruebas-hydra`
-| 2.2 :doc:`introduccion/configuracion-ssh`
-| 2.3 :doc:`introduccion/configuracion-ssh-clave-publica`
+| 2.1 :doc:`seguridad/configuracion-ssh-clave-publica`
+| 2.2 :doc:`seguridad/pruebas-hydra`
+| 2.3 :doc:`seguridad/configuracion-fail2ban`
 
