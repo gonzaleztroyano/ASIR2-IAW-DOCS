@@ -38,3 +38,22 @@ Seguridad
 | 2.2 :doc:`seguridad/pruebas-hydra`
 | 2.3 :doc:`seguridad/configuracion-fail2ban`
 
+Servidor Web
+=============
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Servidor web
+
+   servidor-web/instalar-apache
+   servidor-web/htaccess
+   servidor-web/web1
+   servidor-web/instalar-wordpress
+   servidor-web/configuracion-wordpress
+
+| 3.1 :doc:`servidor-web/instalar-apache`
+| 3.2 :doc:`servidor-web/htaccess`
+| 3.3 :doc:`servidor-web/web1`
+| 3.4 :doc:`servidor-web/instalar-wordpress`
+| 3.5 :doc:`servidor-web/configuracion-wordpress`
