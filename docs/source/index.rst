@@ -57,3 +57,4 @@ Servidor Web
 | 3.3 :doc:`servidor-web/web1`
 | 3.4 :doc:`servidor-web/instalar-wordpress`
 | 3.5 :doc:`servidor-web/configuracion-wordpress`
+| 3.6 :doc:`servidor-web/creacion-usuarios`
