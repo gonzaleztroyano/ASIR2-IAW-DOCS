@@ -10,14 +10,38 @@ Requisitos:
 
 Ejemplo para el usuario ``manuel``:
 
+Con los siguientes comandos, crearemos los directorios para el usuario. 
+
+Después, crearemos el usuario. Con la opción ``--no-create-home`` indicamos que NO queremos utilizar la ruta por defecto en ``/home/`` ni copiar desde ``/etc/skel`` los archivos para poblarlo. Indicamos también que su shell (intérprete de comandos) será ``/bin/false``, que es una shell inexistente que no permite el inicio SSH. 
+
+A continuación, con los directorios creados debemos configurar los permisos de estos. 
+
+.. important::
+
+    *This path, and all its components, must be root-owned directories that are not writable by any other user or group. After the chroot, sshd(8) changes the working directory to the user's home directory.*
+
+    No solo el propio directorio donde enjaularemos al usuario, sino todos los componentes de la ruta deben ser propiedad de root para que chroot funcione. 
+
+    Fuente: `Manual de *sshd_config*. <https://linux.die.net/man/5/sshd_config>`_
+
+También cambiaremos la propiedad de los ficheros y directorios. La raiz del directorio *chrooteado* será de root, y los subdirectorios y archivos del usuario. 
+
+
 .. code-block:: console
 
     mkdir /var/www/manuel/
     mkdir /var/www/manuel/web
     mkdir /var/www/manuel/ficheros
+    mkdir /var/www/manuel/ficheros/logs
+        # También se podría con:
+        # mkdir -p /var/www/manuel/ficheros/logs
+        # mkdir /var/www/manuel/www
     adduser --no-create-home --home /var/www/manuel --shell /bin/false manuel
-    chmod -R 770 /var/www/manuel/
+    chmod 755 /var/www/manuel/
     chown -R manuel:manuel /var/www/manuel/
+    chown root:root /var/www/manuel/
+    chmod -R 770 /var/www/manuel/*
+
 
 Activar SFTP
 ==============
@@ -76,8 +100,8 @@ El archivo de configuración del sitio será de la siguiente manera:
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/manuel/web
 
-        ErrorLog ${APACHE_LOG_DIR}/manuel-error.log
-        CustomLog ${APACHE_LOG_DIR}/manuel-access.log combined
+        ErrorLog /var/www/manuel/ficheros/logs/manuel-error.log
+        CustomLog /var/www/manuel/ficheros/logs/manuel-access.log combined
         AssignUserID manuel manuel
  
     </VirtualHost>
@@ -91,14 +115,24 @@ Activamos el sitio y recargamos el servicio:
     systemctl reload apache2
 
 
-Gestión de permisos
-=====================
+Gestión de permisos y chroot
+============================
 
 En el archivo ``/etc/ssh/sshd_config`` cambiamos/activamos:
 
 .. code-block::
 
-    ForceCommand internal-sftp -u 0027
+    Match User *
+    Include /etc/ssh/sshd_config.d/*
+
+
+Crearemos un archivo nuevo en ``sshd_config.d/manuel.conf``, donde incluiremos:
+
+.. code-block::
+
+        ChrootDirectory %h
+        ForceCommand internal-sftp -u 0027
+        PasswordAuthentication yes
 
 Reiniciamos el servicio:
 
@@ -106,7 +140,22 @@ Reiniciamos el servicio:
 
     systemctl restart ssh
 
-Podremos acceder a la web utilizando el navegador:
+Acceso y comprobación
+=======================
+
+Utilizando el programa FileZilla, o cualquier otro compatible con SFTP el usuario podrá subir y gestionar sus ficheros:
+
+.. image :: ../images/servidor-web/web-15.png
+   :width: 500
+   :align: center
+   :alt: Filezilla Chrooteado
+|br|
+
+.. important::
+
+    Debemos añadir ``sftp://`` antes del host para conectarnos. 
+
+Después de haber subido los archivos, podremos acceder a la web utilizando el navegador:
 
 .. image :: ../images/servidor-web/web-14.png
    :width: 500
@@ -121,46 +170,5 @@ Podremos acceder a la web utilizando el navegador:
 
 .. sudo usermod -a -G manuel root
 
-sudo groupadd sftp_users
-sudo usermod -a -G sftp_users manuel
 
-En sshd_config:
-
-Match User sftp_users 
-        ChrootDirectory /var/www/user
-        ForceCommand internal-sftp 
-        X11Forwarding no 
-        AllowTcpForwarding no 
-        PasswordAuthentication yes
-
-
-https://devanswers.co/configure-sftp-web-server-document-root/#5-method-two-better-security-and-sftp-user-management
-
-chmod 755 /var/
-chmod 755 /var/www/
-chmod 755 /var/www/manuel
-
-chown root:root /var/
-chown root:root /var/www/
-chown root:root /var/www/manuel
-
-
-chown -R root:sftp_users /var/www/manuel/*
-sudo find /var/www/manuel/ -type d -exec chmod 775 {} \;
-sudo find /var/www/manuel/ -type d -exec chmod 775 {} \;
-sudo find /var/www/manuel/ -type f -exec chmod 664 {} \;
-
-sudo find /var/www/manuel -type d -exec chmod g+s {} \;
-
-
-       cd /var/www/
-   90  ls -lah
-   91  cd manuel/
-   92  ls -lah
-   93  chmod 755 -R -
-   94  chmod 755 -R .
-
-
-
-Pruebas con "MARTA"
 

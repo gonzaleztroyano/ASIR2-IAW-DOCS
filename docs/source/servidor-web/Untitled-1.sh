@@ -60,6 +60,6 @@ En sshd_config
     Include /etc/ssh/sshd_config.d/*
 
 En sshd_config.d/pepito.conf
-            ChrootDirectory %h
+        ChrootDirectory %h
         ForceCommand internal-sftp -u 0027
         PasswordAuthentication yes
