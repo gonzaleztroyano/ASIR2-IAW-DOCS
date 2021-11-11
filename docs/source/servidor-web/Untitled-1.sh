@@ -8,11 +8,11 @@ function listar() {
 #FUNCION envio_email
 
 function envio_email() {
- 
-
+    echo "envio_email"
 }
 
 #Función CREAR
+
 function crear() {
 
     read -p "Introduce el usuario a crear: " usuario_nuevo
@@ -28,9 +28,10 @@ function crear() {
     mkdir /var/www/$usuario_nuevo/ficheros/logs
 
     password_generada=$(openssl rand -base64 12)
+    password_hasheada=$(perl -e'print crypt($password_generada, "aa")')
 
     # TODO: #2 que no pida introducir la contraseña, confirmación ni datos adicionales
-    useradd -M --home /var/www/$usuario_nuevo --shell /bin/false -p (perl -e'print crypt($password_generada, "aa")') $usuario_nuevo
+    useradd -M --home /var/www/$usuario_nuevo --shell /bin/false -p $password_hasheada $usuario_nuevo
     chmod 755 /var/www/$usuario_nuevo/
     chown -R $usuario_nuevo:$usuario_nuevo /var/www/$usuario_nuevo/
     chown root:root /var/www/$usuario_nuevo/
@@ -56,7 +57,9 @@ function crear() {
     read -p "Pulsa cualquier tecla para continuar con la creación del sitio en Apache. Pulsa "C" para cancelar" con_apache
 
         case $con_apache in
-        C|c) exit;;
+        C|c) 
+            exit
+        ;;
         *) 
             #Creación del sitio de Apache
             wget -O /etc/apache2/sites-available/$usuario_nuevo.conf https://raw.githubusercontent.com/gonzaleztroyano/ASIR2-IAW-DOCS/main/misc/virtualhost.txt
@@ -65,7 +68,7 @@ function crear() {
             a2ensite $usuario_nuevo.conf
             systemctl reload apache2
             ;;
-    asec
+    esac
 
     #Configuración ChrootDirectory
 
@@ -75,13 +78,14 @@ function crear() {
 }
 
 #Función BORRAR
-function borar() {
-    
+
+function borrar() {
+    echo borrar
 }
 
 #Función MODIFICAR
 function modificar() {
-    
+    echo modificar
 }
 
 
@@ -102,7 +106,7 @@ while [ $select -ne 5 ]; do
         3) borrar() ;;
         4) modificar() ;;
         5) exit ;;
-    asec
+    esac
 done
 
 
