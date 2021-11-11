@@ -9,24 +9,27 @@ function listar(){
 
 #Función CREAR
 function crear(){
-    echo "Creando usuario" + $1
+
+    read -p "Introduce el usuario a crear" usuario_nuevo
+
+    echo "Creando usuario" + $usuario_nuevo
     read -p "Pulsa cualquier tecla para continuar"
-    mkdir /var/www/$1/
-    mkdir /var/www/$1/web
-    mkdir /var/www/$1/ficheros
-    mkdir /var/www/$1/ficheros/logs
+    mkdir /var/www/$usuario_nuevo/
+    mkdir /var/www/$usuario_nuevo/web
+    mkdir /var/www/$usuario_nuevo/ficheros
+    mkdir /var/www/$usuario_nuevo/ficheros/logs
 
     password_generada=$(openssl rand -base64 12)
 
     # TODO: #2 que no pida introducir la contraseña, confirmación ni datos adicionales
-    useradd -M --home /var/www/$1 --shell /bin/false -p (perl -e'print crypt($password_generada, "aa")') $1
-    chmod 755 /var/www/$1/
-    chown -R $1:$1 /var/www/$1/
-    chown root:root /var/www/$1/
-    chmod -R 770 /var/www/$1/*
+    useradd -M --home /var/www/$usuario_nuevo --shell /bin/false -p (perl -e'print crypt($password_generada, "aa")') $usuario_nuevo
+    chmod 755 /var/www/$usuario_nuevo/
+    chown -R $usuario_nuevo:$usuario_nuevo /var/www/$usuario_nuevo/
+    chown root:root /var/www/$usuario_nuevo/
+    chmod -R 770 /var/www/$usuario_nuevo/*
 
 
-    echo "Usuario " + $1 + " creado"
+    echo "Usuario " + $usuario_nuevo + " creado"
     echo "===============ANOTE================"
     echo "||         LA CONTRASEÑA          ||"
     echo "||                                ||"
@@ -36,18 +39,31 @@ function crear(){
     echo "||                                ||"
     echo "===================================="
 
-    chmod 755 /var/www/$1/
-    chown -R $1:$1 /var/www/$1/
-    chown root:root /var/www/$1/
-    chmod -R 770 /var/www/$1/*
+    chmod 755 /var/www/$usuario_nuevo/
+    chown -R $usuario_nuevo:$usuario_nuevo /var/www/$usuario_nuevo/
+    chown root:root /var/www/$usuario_nuevo/
+    chmod -R 770 /var/www/$usuario_nuevo/*
 
-    read -n1 -p "¿Crear el sitio de Apache utilizando la configuración por defecto? [s/n]: " apache_defecto
+    #TODO: Permitir crear sitios con otros subdominios
+    read -p "Pulsa cualquier tecla para continuar con la creación del sitio en Apache. Pulsa "C" para cancelar" con_apache
 
-    case $apache_defecto in
-        n|N) crear_apache($1);;
-        *) read -p "URL para el sitio (se añadirá .iaw.com)" url_sitio
-           crear_apache_mod($1);;
+        case $con_apache in
+        C|c) exit;;
+        *) 
+            #Creación del sitio de Apache
+            wget -O /etc/apache2/sites-available/$usuario_nuevo.conf #AQUÍ VA EL ARCHIVO DESDE GH
+            sed -i 's/USER-TO-CHANGE/$usuario_nuevo/g' /etc/apache2/sites-available/$usuario_nuevo.conf
+            #TODO: COMPROBAR si dentro del sed se pueden usar variables.
+            a2ensite $usuario_nuevo.conf
+            systemctl reload apache2
+            ;;
     asec
+
+    #Configuración ChrootDirectory
+
+        printf "ChrootDirectory /var/www/$usuario_nuevo" >> /etc/ssh/sshd_config.d/$usuario_nuevo.conf
+
+
 }
 
 #Función BORRAR
@@ -70,42 +86,7 @@ while $select !=5; do
     echo "4. Modificar usuarios"
 done
 
-echo "Creando usuario" + $1
 
-read -p "Pulsa cualquier tecla para continuar"
-
-    mkdir /var/www/$1/
-    mkdir /var/www/$1/web
-    mkdir /var/www/$1/ficheros
-    mkdir /var/www/$1/ficheros/logs
-
-# TODO: que no pida introducir la contraseña, confirmación ni datos adicionales
-    adduser --no-create-home --home /var/www/$1 --shell /bin/false $1
-    chmod 755 /var/www/$1/
-    chown -R $1:$1 /var/www/$1/
-    chown root:root /var/www/$1/
-    chmod -R 770 /var/www/$1/*
-
-
-
-printf "
-<VirtualHost *:80>
-    ServerName $1.iaw.com
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/$1/web
-    ErrorLog /var/www/$1/ficheros/logs/$1-error.log
-    CustomLog /var/www/$1/ficheros/logs/$1-access.log combined
-    AssignUserID $1 $1
-</VirtualHost>
-" > /etc/apache2/sites-available/$1.conf
-
-echo "CONFIGURACIÓN DEL SITIO AÑADIDO"
-
-a2ensite $1.conf
-systemctl reload apache2
-
-
-printf "ChrootDirectory /var/www/$1" >> /etc/ssh/sshd_config.d/$1.conf
 
 
 
