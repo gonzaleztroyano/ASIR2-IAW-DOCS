@@ -1,16 +1,24 @@
 #!/bin/bash
 
 #Función LISTAR
-function listar(){
+function listar() {
+    cat /etc/passwd | grep '/var/www' | cut -d ':' -f 1
+}
+
+#FUNCION envio_email
+
+function envio_email() {
+ 
 
 }
 
-#FUNCION 
-
 #Función CREAR
-function crear(){
+function crear() {
 
-    read -p "Introduce el usuario a crear" usuario_nuevo
+    read -p "Introduce el usuario a crear: " usuario_nuevo
+
+    #TODO: Esto no funciona
+    echo ${usuario_nuevo,,} > $usuario_nuevo
 
     echo "Creando usuario" + $usuario_nuevo
     read -p "Pulsa cualquier tecla para continuar"
@@ -51,7 +59,7 @@ function crear(){
         C|c) exit;;
         *) 
             #Creación del sitio de Apache
-            wget -O /etc/apache2/sites-available/$usuario_nuevo.conf #AQUÍ VA EL ARCHIVO DESDE GH
+            wget -O /etc/apache2/sites-available/$usuario_nuevo.conf https://raw.githubusercontent.com/gonzaleztroyano/ASIR2-IAW-DOCS/main/misc/virtualhost.txt
             sed -i 's/USER-TO-CHANGE/$usuario_nuevo/g' /etc/apache2/sites-available/$usuario_nuevo.conf
             #TODO: COMPROBAR si dentro del sed se pueden usar variables.
             a2ensite $usuario_nuevo.conf
@@ -67,27 +75,35 @@ function crear(){
 }
 
 #Función BORRAR
-function borar(){
+function borar() {
     
 }
 
 #Función MODIFICAR
-function modificar (){
+function modificar() {
     
 }
 
 
 select=$0
 
-while $select !=5; do
+while [ $select -ne 5 ]; do
     echo "1. Listar usuarias"
     echo "2. Crear usuarios"
     echo "3. Borrar usuarias"
     echo "4. Modificar usuarios"
+    echo "5. Salir del programa"
+
+    read -p "Opción seleccionada:" select
+
+    case $select in
+        1) listar() ;;
+        2) crear() ;;
+        3) borrar() ;;
+        4) modificar() ;;
+        5) exit ;;
+    asec
 done
-
-
-
 
 
 #El script debe:
