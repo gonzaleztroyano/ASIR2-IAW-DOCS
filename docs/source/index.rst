@@ -59,3 +59,15 @@ Servidor Web
 | 3.4 :doc:`servidor-web/instalar-wordpress`
 | 3.5 :doc:`servidor-web/configuracion-wordpress`
 | 3.6 :doc:`servidor-web/creacion-usuarios`
+
+Script automatización
+=======================
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Script automatización
+
+   script/presentacion
+
+| 4.1 :doc:`servidor-web/presentacion`
