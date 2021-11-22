@@ -73,11 +73,17 @@ Script automatización
    script-automatizacion/2-menu
    script-automatizacion/3-listar
    script-automatizacion/4-crear_usuario
+   script-automatizacion/5-crear_apache
+   script-automatizacion/6-crear_wp
+   script-automatizacion/7-config_wp
 
-| 4.1 :doc:`script-automatizacion/presentacion`
-| 4.2 :doc:`script-automatizacion/1-gestion`
-| 4.3 :doc:`script-automatizacion/2-menu`
-| 4.4 :doc:`script-automatizacion/3-listar`
-| 4.5 :doc:`script-automatizacion/4-crear_usuario`
+| 4.0 :doc:`script-automatizacion/0-presentacion`
+| 4.1 :doc:`script-automatizacion/1-gestion`
+| 4.2 :doc:`script-automatizacion/2-menu`
+| 4.3 :doc:`script-automatizacion/3-listar`
+| 4.4 :doc:`script-automatizacion/4-crear_usuario`
+| 4.5 :doc:`script-automatizacion/5-crear_apache`
+| 4.6 :doc:`script-automatizacion/6-crear_wp`
+| 4.7 :doc:`script-automatizacion/7-config_wp`
 
 

@@ -1,5 +1,5 @@
 #######################################
-Presentación y requisitos del script
+0 - Presentación y requisitos del script
 #######################################
 
 Se propone la creación de un script en Bash/Shell para la gestión del servidor web configurado en el desarrollo de este trimestre. 
