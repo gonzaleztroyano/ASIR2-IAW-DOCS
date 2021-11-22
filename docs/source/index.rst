@@ -68,6 +68,9 @@ Script automatización
    :hidden:
    :caption: Script automatización
 
-   script/presentacion
+   script-automatizacion/presentacion
 
-| 4.1 :doc:`servidor-web/presentacion`
+| 4.1 :doc:`script-automatizacion/presentacion`
+| 4.2 :doc:`script-automatizacion/1-gestion`
+| 4.3 :doc:`script-automatizacion/2-menu`
+

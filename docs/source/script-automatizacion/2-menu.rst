@@ -1,5 +1,5 @@
 ########################
-1 - Función *menu.sh*
+2 - Función *menu.sh*
 ########################
 
 Explicación
