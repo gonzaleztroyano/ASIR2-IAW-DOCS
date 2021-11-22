@@ -69,8 +69,15 @@ Script automatización
    :caption: Script automatización
 
    script-automatizacion/presentacion
+   script-automatizacion/1-gestion
+   script-automatizacion/2-menu
+   script-automatizacion/3-listar
+   script-automatizacion/4-crear_usuario
 
 | 4.1 :doc:`script-automatizacion/presentacion`
 | 4.2 :doc:`script-automatizacion/1-gestion`
 | 4.3 :doc:`script-automatizacion/2-menu`
+| 4.4 :doc:`script-automatizacion/3-listar`
+| 4.5 :doc:`script-automatizacion/4-crear_usuario`
+
 

@@ -14,23 +14,13 @@ Si todo ha ido bien, llama a la función *menu*.
 Código
 ========
 
-.. code-block:: console
+.. raw:: html
 
-    #!/bin/bash
+    <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <script src="https://gist.github.com/gonzaleztroyano/b2d55566f3110a13058d181d798b0097.js"></script>
+    </div>
 
-    source borrar.sh
-    source config_wp.sh
-    source crear_apache.sh
-    source crear_usuario.sh
-    source crear_wp.sh
-    source envio_email.sh
-    source menu.sh
-    source modificar.sh
-    source listar.sh
 
-    if [ "$EUID" -ne 0 ]
-    then echo "Este script de gestión solo puede ser ejecutado por el usuario root"
-    exit
-    fi
+.. note::
 
-    menu
+    Si estás utilizando la versión en PDF, puedes acceder al archivo desde `este enlace <https://github.com/gonzaleztroyano/ASIR2-IAW-SCRIPT/blob/main/gestion.sh>`_
