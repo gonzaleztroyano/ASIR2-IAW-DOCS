@@ -76,14 +76,18 @@ Script automatización
    script-automatizacion/5-crear_apache
    script-automatizacion/6-crear_wp
    script-automatizacion/7-config_wp
+   script-automatizacion/8-envio_email
+   script-automatizacion/9-borrar
+   script-automatizacion/10-modificar
 
-| 4.0 :doc:`script-automatizacion/0-presentacion`
-| 4.1 :doc:`script-automatizacion/1-gestion`
-| 4.2 :doc:`script-automatizacion/2-menu`
-| 4.3 :doc:`script-automatizacion/3-listar`
-| 4.4 :doc:`script-automatizacion/4-crear_usuario`
-| 4.5 :doc:`script-automatizacion/5-crear_apache`
-| 4.6 :doc:`script-automatizacion/6-crear_wp`
-| 4.7 :doc:`script-automatizacion/7-config_wp`
-
-
+| 4. :doc:`script-automatizacion/0-presentacion`
+| 4. :doc:`script-automatizacion/1-gestion`
+| 4. :doc:`script-automatizacion/2-menu`
+| 4. :doc:`script-automatizacion/3-listar`
+| 4. :doc:`script-automatizacion/4-crear_usuario`
+| 4. :doc:`script-automatizacion/5-crear_apache`
+| 4. :doc:`script-automatizacion/6-crear_wp`
+| 4. :doc:`script-automatizacion/7-config_wp`
+| 4. :doc:`script-automatizacion/8-envio_email`
+| 4. :doc:`script-automatizacion/9-borrar`
+| 4. :doc:`script-automatizacion/10-modificar`
