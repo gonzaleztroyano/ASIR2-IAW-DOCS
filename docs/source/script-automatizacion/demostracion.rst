@@ -24,7 +24,7 @@ En `este vídeo <https://asciinema.org/a/x16rJL92DvMGVl5DcsxeO4ppn>`_ puedes ver
 .. raw:: html
 
     <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <script id="asciicast-451202" data-size="big" src="https://asciinema.org/a/451202.js" async></script>
+        <script id="asciicast-451202" data-width=”600” src="https://asciinema.org/a/451202.js" async></script>
     </div>
 
 Veamos el correo que nos ha llegado a la dirección indicada:
