@@ -79,6 +79,7 @@ Script automatización
    script-automatizacion/8-envio_email
    script-automatizacion/9-borrar
    script-automatizacion/10-modificar
+   script-automatizacion/demostracion
 
 | 4. :doc:`script-automatizacion/0-presentacion`
 | 4. :doc:`script-automatizacion/1-gestion`
@@ -91,3 +92,4 @@ Script automatización
 | 4. :doc:`script-automatizacion/8-envio_email`
 | 4. :doc:`script-automatizacion/9-borrar`
 | 4. :doc:`script-automatizacion/10-modificar`
+| 4.11 :doc:`script-automatizacion/demostracion`
