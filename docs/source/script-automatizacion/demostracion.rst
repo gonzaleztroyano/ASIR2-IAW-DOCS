@@ -12,7 +12,7 @@ En `este vídeo <https://asciinema.org/a/pv8DpPmLFFAEDKl0a2jnXSeZZ>`_ puedes ver
 .. raw:: html
 
     <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <script id="asciicast-pv8DpPmLFFAEDKl0a2jnXSeZZ" src="https://asciinema.org/a/pv8DpPmLFFAEDKl0a2jnXSeZZ.js" async></script>
+        <a href="https://asciinema.org/a/451200" target="_blank"><img src="https://asciinema.org/a/451200.svg" /></a>
     </div>
 
 Creación de usuarios
@@ -24,7 +24,7 @@ En `este vídeo <https://asciinema.org/a/x16rJL92DvMGVl5DcsxeO4ppn>`_ puedes ver
 .. raw:: html
 
     <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <script id="asciicast-451202" data-width=”600” src="https://asciinema.org/a/451202.js" async></script>
+        <a href="https://asciinema.org/a/451202" target="_blank"><img src="https://asciinema.org/a/451202.svg" /></a>
     </div>
 
 Veamos el correo que nos ha llegado a la dirección indicada:
@@ -76,7 +76,7 @@ En `este vídeo <https://asciinema.org/a/451204>`_ puedes ver la demostración d
 .. raw:: html
 
     <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <script id="asciicast-451204" src="https://asciinema.org/a/451204.js" async></script>
+        <a href="https://asciinema.org/a/451204" target="_blank"><img src="https://asciinema.org/a/451204.svg" /></a>
     </div>
 
 Borrar usuario
@@ -88,7 +88,7 @@ En `este vídeo <https://asciinema.org/a/451205>`_ puedes ver la demostración d
 .. raw:: html
 
     <div style="position: relative; margin: 2em; padding-bottom: 5%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <script id="asciicast-451205" src="https://asciinema.org/a/451205.js" async></script>
+        <a href="https://asciinema.org/a/451205" target="_blank"><img src="https://asciinema.org/a/451205.svg" /></a>
     </div>
 .. |br| raw:: html
 
