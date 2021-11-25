@@ -68,7 +68,7 @@ Script automatización
    :hidden:
    :caption: Script automatización
 
-   script-automatizacion/presentacion
+   script-automatizacion/0-presentacion
    script-automatizacion/1-gestion
    script-automatizacion/2-menu
    script-automatizacion/3-listar

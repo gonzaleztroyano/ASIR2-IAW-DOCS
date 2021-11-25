@@ -72,3 +72,7 @@ En tanto al CSS y el código PHP, podemos comprobar como que también se está a
    :align: center
    :alt: CSS y PHP probe
 |br|
+
+.. |br| raw:: html
+
+   <br />

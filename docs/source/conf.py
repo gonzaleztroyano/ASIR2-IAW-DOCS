@@ -9,8 +9,8 @@ author = 'Pablo González Troyano - 2º ASIR - IES Villablanca'
 
 master_doc = 'index'
 
-release = '1.6.c31'
-version = '1.6.c31'
+release = '1.6.c32'
+version = '1.6.c32'
 
 # -- General configuration
 
