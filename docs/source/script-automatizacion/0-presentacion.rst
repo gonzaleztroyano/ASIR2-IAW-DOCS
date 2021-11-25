@@ -21,3 +21,12 @@ Código del Script
 
 * :doc:`./1-gestion`
 * :doc:`./2-menu`
+* :doc:`./3-listar`
+* :doc:`./4-crear_usuario`
+* :doc:`./5-crear_apache`
+* :doc:`./6-crear_wp`
+* :doc:`./7-config_wp`
+* :doc:`./8-envio_email`
+* :doc:`./9-borrar`
+* :doc:`./10-modificar`
+* :doc:`./demostracion`

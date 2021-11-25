@@ -110,3 +110,18 @@ Para bloquer una IP en una jaula dada:
 .. |br| raw:: html
 
    <br />
+
+
+.. admonition:: Como comentario
+
+    Es realmente útil para servidores expuestos en internet; además de cambiar el puerto por defecto y otras mediadas. 
+
+    Veamos un ejemplo de la acción de fail2ban durante un par de días en un servidor accesibe desde internet:
+
+    .. image :: ../images/seguridad/fail2ban-5.png
+        :width: 500
+        :align: center
+        :alt: Registro de servidor
+    |br|
+
+    

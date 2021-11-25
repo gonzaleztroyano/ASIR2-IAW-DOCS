@@ -53,3 +53,22 @@ En el archivo ``estilo.css``:
 
     body{ background-color: black;
     color: white;}
+
+Demostración
+===============
+
+Al desplegarlo (en la imagen vemos una instancia de CloudShell, no la máquina virtual, pero el resultado es el mismo) vemos como efectivamente se están aplicando los cambios:
+
+.. image :: ../images/servidor-web/web-16.png
+   :width: 500
+   :align: center
+   :alt: Alert de JS
+|br|
+
+En tanto al CSS y el código PHP, podemos comprobar como que también se está aplicando:
+
+.. image :: ../images/servidor-web/web-17.png
+   :width: 500
+   :align: center
+   :alt: CSS y PHP probe
+|br|

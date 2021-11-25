@@ -78,13 +78,14 @@ Comprobaciones
 ================
 
 Reiniciamos el servicio y realizaremos las siguientes pruebas:
+
 * Login con usuario válido
 * 3 login con password erróneo
 * 3 login con usuario que no existe
 * Login con root
 
 
-En el `siguiente video <https://www.loom.com/embed/685a5ac214a5427ba986964b2a16beca>_` podemos ver el resultado de las pruebas.
+En el `siguiente video <https://www.loom.com/embed/685a5ac214a5427ba986964b2a16beca>`_ podemos ver el resultado de las pruebas.
 
 
 .. raw:: html
@@ -103,3 +104,17 @@ Podemos generar contraseñas seguras utilizando el siguiente comando:
     openssl rand -base64 32
 
 
+Autenticación SSH con 2FA
+===========================
+
+Es altamente recomendable uilizar la autenticación en 2 factores (2FA) en virtualmente cualquier servicio online. SSH, por tanto, no es menos. 
+
+En `este enlace <https://ubuntu.com/tutorials/configure-ssh-2fa#1-overview>`_ se puede consultar la guía completa. 
+
+El resultado sobre un servidor (mi propio *home-lab*, para ser exactos) sería el siguiente:
+
+.. image :: ../images/introduccion/ssh-2.png
+   :width: 500
+   :align: center
+   :alt: 2FA SSH login
+|br|
