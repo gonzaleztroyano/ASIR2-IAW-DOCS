@@ -98,7 +98,7 @@ En el modelo TCP/IP se pueden distinguir cuatro capas: la capa host-red (capas f
 
 
 .. image :: ../images/conceptos-generales/cp-4.png
-   :width: 500
+   :width: 200
    :align: center
    :alt: Estructura básica de modelos.
 |br|
@@ -108,7 +108,7 @@ Comparativa
 ------------
 
 .. image :: ../images/conceptos-generales/cp-2.png
-   :width: 500
+   :width: 200
    :align: center
    :alt: Estructura básica de modelos.
 |br|

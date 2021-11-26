@@ -8,7 +8,7 @@ Es altemante recomendable conocer la existencia (y al menos las características
 * ``chmod`` y ``chown``
 * ``nsloopup`` y ``dig``; así como la edición del archivo ``/etc/hosts`` del equipo. 
 * ``printf`` y ``echo``
-* ``ncat`` también en la versión de SSL
+* ``ncat`` también en la versión de SSL:
 
 .. code-block::
 
