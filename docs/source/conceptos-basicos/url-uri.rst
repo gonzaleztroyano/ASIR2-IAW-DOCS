@@ -23,3 +23,7 @@ Una diferencia entre URL y URI es que el primero solo funciona como un localizad
 
     Imágen del esquema: Wikimedia
     Fuente de la imagen: ginzo.tech
+
+.. |br| raw:: html
+
+   <br />

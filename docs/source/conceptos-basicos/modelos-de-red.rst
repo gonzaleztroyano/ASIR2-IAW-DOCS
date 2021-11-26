@@ -7,16 +7,14 @@ Las primeras redes de ordenadores se diseñaban pensando en el hardware que se i
 
 El problema comenzó a resolverse cuando los fabricantes pensaron en organizar en módulos la arquitectura de red que usaban. De esta forma, cuando se cambiara algún componente hardware, solo la función o el módulo afectado tendrían que ser sustituidos. 
 
-La primera arquitectura de redes comercial se denominó SNA (Systems Network Architecture) y fue presentada por IBM en 1974. SNA se basa en la definición de una serie de capas o niveles; cada uno de estos niveles ofrece sus servicios al siguiente. El modelo de capas que utiliza SNA ha sido la base de todas las arquitecturas de redes en uso.
+La primera arquitectura de redes comercial se denominó **SNA** (Systems Network Architecture) y fue presentada por IBM en 1974. SNA se basa en la definición de una serie de capas o niveles; cada uno de estos niveles ofrece sus servicios al siguiente. El modelo de capas que utiliza SNA ha sido la base de todas las arquitecturas de redes en uso.
 
 Las ideas básicas del modelo de capas son las siguientes:
-
-* Una capa ofrece una serie de servicios a la capa siguiente; ésta, a su vez, los puede usar para implementar los suyos propios.
-
-* Los elementos activos de cada capa se denominan entidades. Una entidad puede ser de software (como un proceso) o de hardware (un componente electrónico). Puede haber varias entidades en cada capa.
+* Una capa **ofrece** una serie de servicios a la capa siguiente; ésta, a su vez, los puede usar para implementar los suyos propios.
+* Los elementos activos de cada capa se denominan **entidades**. Una entidad puede ser de software (como un proceso) o de hardware (un componente electrónico). Puede haber varias entidades en cada capa.
 * A las entidades que componen la misma capa en dos sistemas se las denomina entidades pares.
-* Las acciones llevadas a cabo por las entidades de las diferentes capas en el emisor, las deshacen sus entidades pares en recepción en sentido inverso.
-* La comunicación entre entidades pares se efectúa de acuerdo a una serie de reglas y parámetros conocidos como protocolo de capa.
+* Las acciones llevadas a cabo por las entidades de las diferentes capas en el emisor, las **deshacen** sus entidades pares en recepción en sentido inverso.
+* La comunicación entre entidades pares se efectúa de acuerdo a una serie de **reglas y parámetros** conocidos como protocolo de capa.
 * En un mismo sistema, la comunicación entre dos capas adyacentes se realiza a través de una interfaz que define qué servicios ofrece una capa a su siguiente.
 * Una arquitectura de red queda perfectamente definida a través de sus capas, interfaces y protocolos.
 
@@ -105,7 +103,9 @@ En el modelo TCP/IP se pueden distinguir cuatro capas: la capa host-red (capas f
 
 
 Comparativa
-------------
+============
+
+En la siguiente imagen podemos ver una comparativa entre ambos modelos:
 
 .. image :: ../images/conceptos-generales/cp-2.png
    :width: 200
