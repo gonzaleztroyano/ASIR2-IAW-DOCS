@@ -1,11 +1,11 @@
-# Documentación Implantación de Aplicaciones Web
+# [Documentación Implantación de Aplicaciones Web](https://asir.gonzaleztroyano.es/projects/iaw/?utm_source=Github&utm_content=iaw_repo_link_readme)
 ## Pablo González - 2º ASIR
 
-Web pública del proyecto:
-Licencia:
+La web pública del proyecto es accesible desde este enlace: [https://asir.gonzaleztroyano.es/projects/iaw/](https://asir.gonzaleztroyano.es/projects/iaw/?utm_source=Github&utm_content=iaw_repo_link_readme)
 
-TODOs:
-- [x] : Cambiar nombre del proyecto en [conf.py](./docs/source/conf.py).
-- [x] : Actualizar licencia, si fuera necesario, en [conf.py](./docs/source/conf.py). 
-- [x] : Actualizar autor en [conf.py](./docs/source/conf.py). 
-- [ ] : Añadir favicon en [conf.py](./docs/source/conf.py).
+### Licencia
+Esta obra se publica bajo la licenca Creative Commons BY 4.0 International
+
+Autor y año de publicación: Pablo González, 2021
+
+Más información en [el archivo de licencia](./license.md).
