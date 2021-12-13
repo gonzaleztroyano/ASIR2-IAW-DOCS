@@ -108,3 +108,15 @@ Script automatización
 | 4. :doc:`script-automatizacion/9-borrar`
 | 4. :doc:`script-automatizacion/10-modificar`
 | 4.11 :doc:`script-automatizacion/demostracion`
+
+Trimestre 2
+=======================
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Trimestre 2
+
+   trimestre-2/lenguajes-y-bibliotecas
+
+| 5.1 :doc:`trimestre-2/lenguajes-y-bibliotecas`
