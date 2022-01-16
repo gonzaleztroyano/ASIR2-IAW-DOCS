@@ -3,7 +3,13 @@ Implantación de Aplicaciones Web
 ###################################
 
 
-Documentación del módulo Implantación de Aplicaciones Web. CFGS Administración de Sistemas Operativos en Red
+Documentación del módulo Implantación de Aplicaciones Web. CFGS Administración de Sistemas Operativos en Red.
+
+.. admonition:: Licencia
+   Esta obra se publica bajo la licenca Creative Commons BY 4.0 International
+   Autor y año de publicación: Pablo González, 2021
+   Más información en el `archivo de licencia <https://github.com/gonzaleztroyano/ASIR2-IAW-DOCS/blob/main/license.md>`_.
+
 
 Conceptos básicos
 ===================
@@ -118,5 +124,9 @@ Trimestre 2
    :caption: Trimestre 2
 
    trimestre-2/lenguajes-y-bibliotecas
+   trimestre-2/instalacion-woocommerce
+   trimestre-2/instalar-tema-wordpress
 
 | 5.1 :doc:`trimestre-2/lenguajes-y-bibliotecas`
+| 5.2 :doc:`trimestre-2/instalacion-woocommerce`
+| 5.3 :doc:`trimestre-2/instalar-tema-wordpress`
